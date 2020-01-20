@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="name">GOAT</string>
+    <string name="yellow_star">Yellow star</string>
+
+
+    <string name="bio">
+
+        Hi, I am better known as <b>GOAT</b> from my FPL mini-league exploits
+        \n I was born in Nyeri - Kenya
+        \n Android programming is in my blood and I enjoy it big time
+        \n The Big Bang intrests me a lot
+        \n I love cats
+        \n I like brown skin gals
+        \n My ultimate destination is <i>Nice la Belle</i> i.e. Nice because
+        \n Nice has the vibrancy of Italy and the charm of France
+        \n I\'m a nice guy
+        \n You can find me on this website
+        \n www.androidshowtime.com
+        \n My brother is called Charles
+        \n I work as a Care Manager
+    </string>
+</resources>
