@@ -2,22 +2,30 @@
     <string name="app_name">AboutMe</string>
     <string name="name">GOAT</string>
     <string name="yellow_star">Yellow star</string>
+    <string name="done">Done</string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
 
 
     <string name="bio">
 
-        Hi, I am better known as <b>GOAT</b> from my FPL mini-league exploits
-        \n I was born in Nyeri - Kenya
-        \n Android programming is in my blood and I enjoy it big time
-        \n The Big Bang intrests me a lot
-        \n I love cats
-        \n I like brown skin gals
-        \n My ultimate destination is <i>Nice la Belle</i> i.e. Nice because
-        \n Nice has the vibrancy of Italy and the charm of France
-        \n I\'m a nice guy
-        \n You can find me on this website
-        \n www.androidshowtime.com
-        \n My brother is called Charles
-        \n I work as a Care Manager
+       \nHi, around here I\'m better known as <b>GOAT</b> from my FPL
+        mini-league exploits last season.
+
+
+        \n\nI was born in Nyeri - Kenya to Robert and Jane and was brought
+        up by my grandma
+        \nAndroid programming is in my blood and I enjoy it big time. You\'ll find me
+        testing apps on Android Studio and when I am tired I play FIFA or Chess Titans
+        \nThe Big Bang interests me a lot and I\'m a big fun of it as it explains
+        the Cosmos Origin
+        \n\nI love cats
+        \n\nI like brown skin gals
+        \n\nMy ultimate destination is <i>Nice la Belle</i> i.e. Nice because
+        \n\nNice has the vibrancy of Italy and the charm of France
+        \n\nI\'m a nice guy
+        \n\nYou can find me on this website
+        \n\nwww.androidshowtime.com
+        \n\nMy brother is called Charles
+        \n\nI work as a Care Manager at 9 West in Westlands
     </string>
 </resources>
