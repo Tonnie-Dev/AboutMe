@@ -12,19 +12,23 @@ import com.androidshowtime.aboutme.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
-   private lateinit var binding:ActivityMainBinding
+    private val myName = MyName("Vontonnie Fanadez")
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+
+        //connecting binding class to model class
+        binding.myName = myName
 
         binding.doneButton.setOnClickListener {
 
 
-            binding.apply{
-                nicknameText.text = nickname_edit.text
+            binding.apply {
+                myName?.nickname = nickname_edit.text.toString()
+                invalidateAll()
 
                 //modifying views visibility
                 nicknameEdit.visibility = View.GONE
@@ -56,8 +60,6 @@ binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     }
 
 
-
-
     private fun updateNickName(view: View) {
 
         binding.doneButton.visibility = View.GONE
@@ -71,7 +73,8 @@ binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         //using the inputMethodManager to show keyboard
         val inputManager = getSystemService(
-            Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            Context.INPUT_METHOD_SERVICE
+        ) as InputMethodManager
 
         inputManager.showSoftInput(nickname_edit, 0)
 
