@@ -7,19 +7,32 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.androidshowtime.aboutme.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+   private lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        done_button.setOnClickListener {
-            nickname_text.text = nickname_edit.text
+binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-            //modifying views visibility
-            nickname_edit.visibility = View.GONE
-            nickname_text.visibility = View.VISIBLE
+
+        binding.doneButton.setOnClickListener {
+
+
+            binding.apply{
+                nicknameText.text = nickname_edit.text
+
+                //modifying views visibility
+                nicknameEdit.visibility = View.GONE
+                doneButton.visibility = View.GONE
+                nicknameText.visibility = View.VISIBLE
+
+            }
+
 
             //using it to call the extension fxn
             it.hideKeyboard()
@@ -47,14 +60,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateNickName(view: View) {
 
-        view.visibility = View.GONE
+        binding.doneButton.visibility = View.GONE
 
-        done_button.visibility = View.VISIBLE
+        binding.doneButton.visibility = View.VISIBLE
 
-        nickname_edit.visibility = View.VISIBLE
+        binding.nicknameEdit.visibility = View.VISIBLE
 
         //requesting focus for the editTextView
-        nickname_edit.requestFocus()
+        binding.nicknameEdit.requestFocus()
 
         //using the inputMethodManager to show keyboard
         val inputManager = getSystemService(
